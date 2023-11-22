@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import "/home/vinish/Desktop/React/website_demo/src/Component/Blog.css";
+import "./Blog.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
