@@ -1,0 +1,44 @@
+.image-caption {
+    margin-bottom: 35% !important;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-left: 10%;
+    width: 50%;
+    color: white;
+    border-radius: 0px 54px 0px 54px;
+
+}
+
+.welcome-text {
+    color: orange;
+    font-weight: 600;
+}
+
+.logo-text {
+    color: orange;
+    font-weight: 600;
+}
+
+.NavLink {
+    position: relative;
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+
+.NavLink::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+
+    bottom: 0;
+    left: 0;
+    background-color: orange;
+
+    transition: width 0.3s ease-in-out;
+
+}
+
+.NavLink:hover::before {
+    width: 100%;
+}
