@@ -9,13 +9,16 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
+  const [selectedTime, setSelectedTime] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const sendMail = (e) => {
     e.preventDefault();
 
     const Details = {
       name,
       email,
+      phoneNumber,
+      selectedTime,
       message,
     };
     const serviceId = "service_opsyz0e";
@@ -27,20 +30,17 @@ const Contact = () => {
         setName("");
         setEmail("");
         setMessage("");
+        setSelectedTime("");
+        setPhoneNumber("");
         console.log(res);
         alert("Message sent successfully");
       })
       .catch((err) => console.log(err));
   };
-
   useEffect(() => {
-    AOS.init({
-      duration: 800,
-      easing: "ease-in-out",
-    });
+    AOS.init({ duration: 800, easing: "ease-in-out" });
     emailjs.init("2CxD9P5v4QiLJwqg5");
   }, []);
-
   return (
     <section id="contact" className="py-5">
       <Container className="rounded shadow bg-dark" data-aos="fade-up">
@@ -71,6 +71,25 @@ const Contact = () => {
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </Form.Group>
+              <Form.Group controlId="phoneInput">
+                <Form.Label>Phone Number</Form.Label>
+                <Form.Control
+                  type="tel"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </Form.Group>
+              <Form.Group controlId="timeInput">
+                <Form.Label>Select Time</Form.Label>
+                <Form.Control
+                  type="time"
+                  value={selectedTime}
+                  onChange={(e) => setSelectedTime(e.target.value)}
                   required
                 />
               </Form.Group>

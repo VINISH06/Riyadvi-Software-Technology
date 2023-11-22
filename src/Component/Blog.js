@@ -42,6 +42,22 @@ const Blog = () => {
       author: "Emma Davis",
       date: "December 2, 2023",
     },
+    {
+      id: 5,
+      title: "Building Scalable APIs with Node.js and Express",
+      content:
+        "Fusce dapibus commodo lectus vitae aliquet. Proin vestibulum felis vel ipsum consequat, non pharetra libero interdum.",
+      author: "Emma Davis",
+      date: "December 2, 2023",
+    },
+    {
+      id: 6,
+      title: "Building Scalable APIs with Node.js and Express",
+      content:
+        "Fusce dapibus commodo lectus vitae aliquet. Proin vestibulum felis vel ipsum consequat, non pharetra libero interdum.",
+      author: "Emma Davis",
+      date: "December 2, 2023",
+    },
   ];
 
   return (
